@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-
-<html>
-    <head style="background-color: #7fffd4">
-        <meta name="viewport" content="width-device-width, initial-scale=1"/>
-        <title>Задание 8 - Савинцев Вадим</title>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>Задание 8</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-         <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
-         <script src="jquery-3.4.1.min.js" defer></script>
-         <script src="gallery.js" defer></script>
+        <script src="form.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     </head>
     <body>
-    <button class="button"> Форма </button>
-    <div class="form">
-      <form action="https://api.slapform.com/{form_id}" method="post">
-        <label>
-          Ваше имя:<br/>
-          <input name="name"
-          placeholder="Введите ваше имя"/>
-      </label> <br/>
-      <label>
-          Ваш email: <br/>
-          <input name="email"
-          type="email"
-          placeholder="Введите вашу почту"/>
-      </label> <br/>
-      <label>
-        Ваше сообщение:<br/>
-        <textarea name="text" placeholder="Введите ваше сообщение"></textarea> 
-    </label><br/>
-    <label>
-      Согласие на обработку персональных данных
-      <input type="checkbox" name="check"/>
-  </label><br/>
-  <input type="submit" value="Отправить"/>
-</div>
-      </form>
+        <div class="button">
+            <button class="formbutton">форма</button>
+        </div>
+        <div class="popup">
+            <div id="forms">
+        <form class="form" action="https://formcarry.com/s/QW4T8MDEi" method="POST" accept-charset="UTF-8">
+            <label>Имя:<br/><input id="name" name="name" type="text" placeholder="Ваше Имя" required></label><br/>
+            <label>Почта:<br/><input id="email" type="email" name="email" placeholder="Ваша почта" required></label><br/>
+            <label>Сообщение:<br/><textarea id="information" name="information" placeholder="Ваше сообщение" required></textarea></label><br/>
+            <label>Я согласен(на) c политикой обработки персональных данных<input id="checkbox" name="check" type="checkbox" required></label><br/>
+            <input class="sendbutton" type="submit" value="отправить"/>
+        </form>
+        </div>
+        </div>
     </body>
-    <footer style="background-color: #7fffd4">(c) Савинцев Вадим 2022</footer>
 </html>
