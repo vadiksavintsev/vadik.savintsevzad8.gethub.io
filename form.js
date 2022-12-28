@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 information.value = localStorage.getItem('Сообщение');
                 checkbx.checked = false;
                 }
+                error: function (jqxhr, status, errorMsg) {
+                alert('Ошибка!');
+              },
               },
             });
           });
