@@ -68,9 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkbx.checked = false;
                 }
               },
-              error: function (jqxhr, status, errorMsg) {
-                alert('Ошибка!');
-              },
             });
           });
         });
