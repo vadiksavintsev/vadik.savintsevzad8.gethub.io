@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale-1.0">
-        <title>Задание 8</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="form.js" defer></script>
-    </head>
-    <body>
-        <div class="button">
-            <button class="formbutton">форма</button>
-        </div>
-        <div class="popup">
-            <div id="forms">
-        <form class="form" action="https://formcarry.com/s/QW4T8MDEi" method="POST" accept-charset="UTF-8">
-            <label>Имя:<br/><input id="name" name="name" type="text" placeholder="Ваше Имя" required></label><br/>
-            <label>Почта:<br/><input id="email" type="email" name="email" placeholder="Ваша почта" required></label><br/>
-            <label>Сообщение:<br/><textarea id="information" name="information" placeholder="Ваше сообщение" required></textarea></label><br/>
-            <label>Я согласен(на) c политикой обработки персональных данных<input id="checkbox" name="check" type="checkbox" required></label><br/>
-            <input class="sendbutton" type="submit" value="отправить"/>
-        </form>
-        </div>
-        </div>
-    </body>
+  <head>
+    <title>WEB 8</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script src="form.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="bttn">
+    <button class="bttn1">Показать форму</button>
+  </div>
+    <div class="popup">
+          <div id="forma"> 
+            <form class="forms" accept-charset="UTF-8">
+              <label>
+                Имя:
+                <br />
+                <input id="name"
+                  name="names"
+                  placeholder="Ваше Имя"
+                  type="text" required
+                /> </label
+              ><br />
+              <label>
+                Почта:
+                <br />
+                <input id="e-mail"
+                  name="email"
+                  placeholder="Ваш e-mail"
+                  type="email"
+                  required
+                />
+              </label>
+              <br />
+              <label>
+                Ваше сообщение:
+                <br />
+                <textarea id="information"
+                  name="informations"
+                  placeholder="Что вашей душе угодно, излейте здесь всё"
+                  required
+                ></textarea>
+              </label>
+              <br />
+              <label
+                >Я согласен(на) с политикой обработки персональных данных <input id="checkb"
+                  type="checkbox"
+                  name="check-1"
+                  required
+              /></label>
+              <br />
+              <input class="sendbtn" type="submit" value="Отправить" />
+            </form>
+          </div>
+    </div>
+  </body>
 </html>
