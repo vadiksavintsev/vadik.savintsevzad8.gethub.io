@@ -1,16 +1,16 @@
-let openPopupButtons = document.querySelectorAll('.formbutton');
-let form = document.querySelector('#forms');
+let openPopupButtons = document.querySelectorAll('.bttn1');
+let form = document.querySelector('#forma');
 let popup = document.querySelector('.popup');
 
 let names = document.getElementById('name');
-let email = document.getElementById('email');
-let information = document.getElementById('information');
-let checkbx = document.getElementById('checkbox');
+let email = document.getElementById('e-mail');
+let massage = document.getElementById('information');
+let checkbx = document.getElementById('checkb');
 
 function save() {
   localStorage.setItem('Имя', names.value);
   localStorage.setItem('Почта', email.value);
-  localStorage.setItem('Сообщение', information.value);
+  localStorage.setItem('Сообщение', massage.value);
   if (checkbx.checked) {
     localStorage.setItem('Чекбокс', 1);
   } else {
@@ -20,7 +20,7 @@ function save() {
 document.addEventListener('DOMContentLoaded', () => {
   names.value = localStorage.getItem('Имя');
   email.value = localStorage.getItem('Почта');
-  information.value = localStorage.getItem('Сообщение');
+  massage.value = localStorage.getItem('Сообщение');
   let checkBox = localStorage.getItem('Чекбокс');
   if (checkBox == 1) {
     checkbx.checked = true;
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   names.oninput = save;
   email.oninput = save;
-  information.oninput = save;
+  massage.oninput = save;
   checkbx.oninput = save;
   
   openPopupButtons.forEach((button) => {
@@ -41,14 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         form.classList.remove('open');
         popup.classList.remove('popup_open');
       };
-      history.pushState({ page: 1 }, '', '?form');
+      history.pushState({ page: 1 }, '', '?forma');
       form.classList.add('open');
       popup.classList.add('popup_open');
     });
   });
   
     $(function(){
-      $(".form").submit(function(e){
+      $(".forms").submit(function(e){
           e.preventDefault();
           $.ajax({
               type: "POST",
@@ -64,12 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
                  localStorage.removeItem('Чекбокс');
                  names.value = localStorage.getItem('Имя');
                 email.value = localStorage.getItem('Почта');
-                information.value = localStorage.getItem('Сообщение');
+                massage.value = localStorage.getItem('Сообщение');
                 checkbx.checked = false;
                 }
-                error: function (jqxhr, status, errorMsg) {
-                alert('Ошибка!');
               },
+              error: function (jqxhr, status, errorMsg) {
+                alert('Ошибка!');
               },
             });
           });
